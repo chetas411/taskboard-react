@@ -9,8 +9,8 @@ const Board = () => {
     const [showModal,setShowModal] = useState(false);
     const[imgUrl,setImgUrl] = useState('');
     useEffect(() => {
-        axios.get('https://picsum.photos/id/77/info').
-            then((res) => setImgUrl(res.data.download_url));
+        axios.get('https://picsum.photos/id/77/info')
+            .then((res) => setImgUrl(res.data.download_url));
     }, []);
     const closeModal = ()=>{
         setShowModal(false);
